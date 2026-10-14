@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open App on Mobile - Expo Go</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    body { background: #0F172A; color: #F8FAFC; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+    .card { background: #1E293B; border: 1px solid #334155; border-radius: 20px; padding: 36px; max-width: 480px; width: 100%; text-align: center; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); }
+    .badge { display: inline-block; background: #312E81; color: #818CF8; border: 1px solid #4338CA; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 700; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 800; margin-bottom: 10px; color: #FFFFFF; }
+    p.subtitle { color: #94A3B8; font-size: 14px; margin-bottom: 24px; line-height: 1.5; }
+    .qr-container { background: #FFFFFF; padding: 18px; border-radius: 16px; display: inline-block; margin-bottom: 24px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); }
+    .qr-container img { width: 220px; height: 220px; display: block; }
+    .url-box { background: #0F172A; border: 1.5px solid #4F46E5; border-radius: 12px; padding: 14px; margin-bottom: 24px; }
+    .url-label { font-size: 11px; font-weight: 700; color: #818CF8; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .url-text { font-family: monospace; font-size: 16px; color: #38BDF8; font-weight: 700; word-break: break-all; }
+    .instructions { text-align: left; background: #0F172A; border-radius: 12px; padding: 18px; margin-bottom: 20px; border: 1px solid #334155; }
+    .instructions h3 { font-size: 14px; color: #F1F5F9; margin-bottom: 10px; font-weight: 700; }
+    .instructions ol { padding-left: 20px; font-size: 13px; color: #94A3B8; line-height: 1.8; }
+    .instructions strong { color: #F8FAFC; }
+    .status-badge { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 12px; color: #34D399; font-weight: 600; }
+    .status-dot { width: 8px; height: 8px; background: #10B981; border-radius: 50%; box-shadow: 0 0 8px #10B981; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">LIVE SERVER ACTIVE</div>
+    <h1>Mobile Me Scan Karein</h1>
+    <p class="subtitle">Apne phone par <strong>Expo Go</strong> app se neeche diya gaya QR code scan karein ya URL enter karein.</p>
+    
+    <div class="qr-container">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=exp://192.168.1.63:8081" alt="Expo Go QR Code" />
+    </div>
+
+    <div class="url-box">
+      <div class="url-label">EXPO CONNECTION URL</div>
+      <div class="url-text">exp://192.168.1.63:8081</div>
+    </div>
+
+    <div class="instructions">
+      <h3>📱 Kaise Connect Karein:</h3>
+      <ol>
+        <li>Mobile me <strong>Expo Go</strong> app open karein.</li>
+        <li>Make sure phone aur PC <strong>same Wi-Fi</strong> par connected hon.</li>
+        <li><strong>Android:</strong> "Enter URL manually" dabayein aur <code>exp://192.168.1.63:8081</code> dalein, ya is QR code ko scan karein.</li>
+        <li><strong>iPhone:</strong> Phone ka Camera khol kar is QR code ko scan karein.</li>
+      </ol>
+    </div>
+
+    <div class="status-badge">
+      <div class="status-dot"></div>
+      Metro Server is listening on 192.168.1.63:8081
+    </div>
+  </div>
+</body>
+</html>
